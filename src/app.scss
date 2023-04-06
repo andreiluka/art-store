@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import "normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: $baseFontSize;
+
+  @include laptop {
+    font-size: 15px;
+  }
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
+#app {
+  font-family: 'Merriweather', Georgia, Times, serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color;
+  font-size: rem(14);
+  height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $background-color;
+}
+
+.page-content {
+  flex: 1;
+  padding-bottom: rem(45);
+  background-color: $background-color;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -32px;
+
+    @include tablets {
+      justify-content: space-between;
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    width: 280px;
+    margin: 0 0 32px 32px;
+
+    @include tablets {
+      width: 48%;
+      margin-left: 0;
+    }
+
+    @include phones {
+      width: 100%;
+    }
+  }
+}
+
+.container {
+  max-width: 1216px;
+  width: 95%;
+  margin: 0 auto;
+}

@@ -1,28 +1,57 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import pageHeader from './components/pageHeader.vue';
+import pageFooter from './components/pageFooter.vue';
+import pageTitle from './components/pageTitle.vue';
+import pageCard from './components/pageCard.vue';
+import modalCard from './components/modalCard.vue';
+import { mapActions, mapState } from "vuex";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    pageHeader,
+    pageTitle,
+    pageCard,
+    modalCard,
+    pageFooter
+  },
+  computed: {
+    ...mapState({
+      filteredPaintings: state => state.filteredPaintings,
+      modalVisibility: state => state.modalVisibility
+    })
+  },
+  methods: {
+    ...mapActions(['fetchPaintings']),
+  },
+  created() {
+    this.fetchPaintings('paintings');
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <div id="app">
+    <div class="wrap">
+      <pageHeader/>
+      <main class="page-content">
+        <div class="container">
+          <pageTitle title="Картины эпохи Возрождения"/>
+          <ul class="page-content__list">
+            <li 
+            v-for="item in filteredPaintings"
+            :key="item.id"
+            class="page-content__item"
+            >
+              <pageCard :picture="item"/>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <pageFooter/>
+      <modalCard v-if="modalVisibility"/>
+    </div>
+  </div>
+</template>
+
+<style lang="scss"  src="./app.scss"></style>

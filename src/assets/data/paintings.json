@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "imgSrc": "botticelli.jpg",
+    "images": ["botticelli.jpg", "da-vinci.jpg", "michelangelo.jpg"],
+    "imgName": "«Рождение Венеры» Сандро Боттичелли",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, dolor odio beatae laboriosam nemo nobis reprehenderit delectus non quae doloremque voluptates corrupti consequatur eos. Error ipsum minima ullam quaerat rerum?",
+    "oldPrice": 2000000,
+    "currentPrice": 1000000,
+    "inCart": false,
+    "sold": false
+  },
+  {
+    "id": 2,
+    "imgSrc": "da-vinci.jpg",
+    "images": ["da-vinci.jpg", "rembrandt.jpg", "michelangelo.jpg"],
+    "imgName": "«Тайная вечеря»  Леонардо да Винчи",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, dolor odio beatae laboriosam nemo nobis reprehenderit delectus non quae doloremque voluptates corrupti consequatur eos. Error ipsum minima ullam quaerat rerum?",
+    "oldPrice": 0,
+    "currentPrice": 3000000,
+    "inCart": false,
+    "sold": false
+  },
+  {
+    "id": 3,
+    "imgSrc": "michelangelo.jpg",
+    "images": ["michelangelo.jpg", "botticelli.jpg", "rembrandt.jpg"],
+    "imgName": "«Сотворение Адама» Микеланджело",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, dolor odio beatae laboriosam nemo nobis reprehenderit delectus non quae doloremque voluptates corrupti consequatur eos. Error ipsum minima ullam quaerat rerum?",
+    "oldPrice": 6000000,
+    "currentPrice": 5000000,
+    "inCart": true,
+    "sold": false
+  },
+  {
+    "id": 4,
+    "imgSrc": "rembrandt.jpg",
+    "images": ["rembrandt.jpg", "da-vinci.jpg", "botticelli.jpg"],
+    "imgName": "«Урок анатомии»  Рембрандт",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, dolor odio beatae laboriosam nemo nobis reprehenderit delectus non quae doloremque voluptates corrupti consequatur eos. Error ipsum minima ullam quaerat rerum?",
+    "oldPrice": 0,
+    "currentPrice": 0,
+    "inCart": false,
+    "sold": true
+  }
+]
